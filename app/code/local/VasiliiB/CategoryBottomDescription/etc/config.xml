@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<VasiliiB_CategoryBottomDescription>
+			<version>0.0.1</version>
+		</VasiliiB_CategoryBottomDescription>
+	</modules>
+
+	<frontend>
+		<layout>
+            <updates>
+                <vasiliib_categorybottomdescription>
+                    <file>CategoryBottomDesc.xml</file>
+                </vasiliib_categorybottomdescription>
+            </updates>
+        </layout>
+	</frontend>
+
+	<global>
+		<resources>
+			<categorybottomdescription_setup>
+				<setup>
+					<module>VasiliiB_CategoryBottomDescription</module>
+					<class>Mage_Catalog_Model_Resource_Setup</class>
+				</setup>
+				<connection>
+					<use>default_setup</use>
+				</connection>
+			</categorybottomdescription_setup>
+		</resources>
+	</global>
+</config>

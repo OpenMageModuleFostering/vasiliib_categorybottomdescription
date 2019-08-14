@@ -1,0 +1,8 @@
+<?php
+	$_category  = $this->getCurrentCategory();
+	if( $_category->getBottomDescription() ):
+?>
+	<div class="category_description description bottom_description">
+		<?php echo Mage::helper('cms')->getPageTemplateProcessor()->filter($_category->getBottomDescription()); ?>
+	</div>
+<?php endif; ?>

@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/VasiliiB_CategoryBottomDescription",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "Show additional description at the bottom of category page (after product list).",
+    "authors": [
+    {
+        "name": "Vasilii",
+        "email": "burlacu.vasilii@yabdex.ru"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
