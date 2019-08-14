@@ -2,18 +2,29 @@
 <config>
 	<modules>
 		<VasiliiB_CategoryBottomDescription>
-			<version>0.0.1</version>
+			<version>0.0.2</version>
 		</VasiliiB_CategoryBottomDescription>
 	</modules>
 
 	<frontend>
 		<layout>
-            <updates>
-                <vasiliib_categorybottomdescription>
-                    <file>CategoryBottomDesc.xml</file>
-                </vasiliib_categorybottomdescription>
-            </updates>
-        </layout>
+			<updates>
+				<vasiliib_categorybottomdescription>
+					<file>CategoryBottomDesc.xml</file>
+				</vasiliib_categorybottomdescription>
+			</updates>
+		</layout>
+
+		<events>
+			<catalog_category_load_before>
+				<observers>
+					<vasiliib_reindexflatcategory>
+						<class>VasiliiB_CategoryBottomDescription_Model_Observer</class>
+						<method>reindexFlatCategory</method>
+					</vasiliib_reindexflatcategory>
+				</observers>
+			</catalog_category_load_before>
+		</events>
 	</frontend>
 
 	<global>
@@ -29,4 +40,5 @@
 			</categorybottomdescription_setup>
 		</resources>
 	</global>
+
 </config>

@@ -27,11 +27,23 @@
 *
 */
 
-$_category  = $this->getCurrentCategory();
-$_categoryBottomDescription = $_category->getBottomDescription();
-if( $_categoryBottomDescription ):
-?>
-	<div class="category-description description category-bottom-description">
-		<?php echo Mage::helper('cms')->getPageTemplateProcessor()->filter($_categoryBottomDescription); ?>
-	</div>
-<?php endif; ?>
+class VasiliiB_CategoryBottomDescription_Model_Observer
+{
+
+	/**
+	* Reindex Catalog Category Data
+	*/
+	public function reindexFlatCategory(Varien_Event_Observer $observer)
+	{
+		$reindexer = Mage::getModel('index/indexer')->getProcessByCode('catalog_category_flat');
+
+		if(
+			Mage::getStoreConfig('catalog/frontend/flat_catalog_category')
+			&&
+			$reindexer->getStatus() == Mage_Index_Model_Process::STATUS_REQUIRE_REINDEX
+		)
+		{
+		  $reindexer->reindexAll();
+		}
+	}
+}

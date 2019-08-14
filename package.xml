@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>VasiliiB_CategoryBottomDescription</name>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <stability>stable</stability>
-    <license>OSL</license>
+    <license uri="https://www.apache.org/licenses/LICENSE-2.0">APL 2.0</license>
     <channel>community</channel>
     <extends/>
-    <summary>Show additional description at the bottom of category page (after product list).</summary>
-    <description>Show additional description at the bottom of category page (after product list).</description>
-    <notes>Extension as it is described with basic functionality</notes>
-    <authors><author><name>Vasilii</name><user>vasiliib</user><email>burlacu.vasilii@yabdex.ru</email></author></authors>
-    <date>2016-07-05</date>
-    <time>13:55:08</time>
-    <contents><target name="magedesign"><dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="CategoryBottomDesc.xml" hash="6b71cdeb9126124ff03575757279d28c"/></dir><dir name="template"><dir name="catalog"><dir name="category"><file name="bottom-desc.phtml" hash="47786a0e9bc840e007b0b31735c2b30b"/></dir></dir></dir></dir></dir></dir></dir></target><target name="magelocal"><dir><dir name="VasiliiB"><dir name="CategoryBottomDescription"><dir name="etc"><file name="config.xml" hash="0c06abaa9164162d7029187535fdbff8"/></dir><dir name="sql"><dir name="categorybottomdescription_setup"><file name="mysql4-install-0.0.1.php" hash="8f9d092f4ff0a92b6eb0c60fbfec7dd1"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir><dir name="modules"><file name="VasiliiB_CategoryBottomDescription.xml" hash="5c7dbb4bf45c54c77e0632658dade5e3"/></dir></dir></target></contents>
+    <summary>Add bottom description to category</summary>
+    <description>Add bottom description to category</description>
+    <notes>Fixed issue when store has Catalog Category Flat Data enabled and bottom description is not shown.</notes>
+    <authors><author><name>Burlacu Vasilii Alexei</name><user>vasiliib</user><email>burlacu.vasilii@yandex.ru</email></author></authors>
+    <date>2016-11-01</date>
+    <time>19:46:44</time>
+    <contents><target name="magelocal"><dir name="VasiliiB"><dir name="CategoryBottomDescription"><dir name="Model"><file name="Observer.php" hash="49cd6f83142c3b04eeb35464762c0608"/></dir><dir name="etc"><file name="config.xml" hash="2696846eebfcff378e769eeaeea040f7"/></dir><dir name="sql"><dir name="categorybottomdescription_setup"><file name="mysql4-install-0.0.1.php" hash="78a4acb15a4c4b3a56e44947f22f60ba"/></dir></dir></dir></dir></target><target name="mage"><dir name="."><dir name="app"><dir name="etc"><dir name="modules"><file name="VasiliiB_CategoryBottomDescription.xml" hash="5c7dbb4bf45c54c77e0632658dade5e3"/></dir></dir><dir name="design"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="CategoryBottomDesc.xml" hash="af6549c7777e52a472abfd93f5eacc38"/></dir><dir name="template"><dir name="catalog"><dir name="category"><file name="bottom-desc.phtml" hash="6a160a09aa2de9039f69da22382b5b21"/></dir></dir></dir></dir></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.6.1</min><max>7.7.0</max></php><package><name>Mage_Catalog</name><channel>community</channel><min/><max/></package></required></dependencies>
+    <dependencies><required><php><min>5.5.0</min><max>8.0.0</max></php></required></dependencies>
 </package>
