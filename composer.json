@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/VasiliiB_CategoryBottomDescription",
+    "name": "OpenMageModuleFostering\/VasiliiB_CategoryBottomDescription",
     "type": "magento-module",
     "license": "APL-2.0",
     "homepage": "",
     "description": "Add bottom description to category",
     "authors": [
-    {
-        "name": "Burlacu Vasilii Alexei",
-        "email": "burlacu.vasilii@yandex.ru"
-    }
-],
+        {
+            "name": "Burlacu Vasilii Alexei",
+            "email": "burlacu.vasilii@yandex.ru"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
